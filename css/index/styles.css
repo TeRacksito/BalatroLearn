@@ -1,0 +1,11 @@
+#main_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--global-padding);
+}

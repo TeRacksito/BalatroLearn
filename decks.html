@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balatro Learn</title>
+    <link rel="stylesheet" href="css/structure.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/decks/structure.css">
+    <link rel="stylesheet" href="css/decks/styles.css">
+    <link rel="stylesheet" href="css/pixel_button.css">
+    <link rel="stylesheet" href="css/arrow_collapse.css">
+    <link rel="stylesheet" href="css/decks/deck_ghost.css">
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="void"></div>
+        <header class="block">Balatro Studing Cards</header>
+        <section id="main_section" class="block bigblock">
+            <div class="deck deck-void">
+                <div class="deck-collapse">
+                    <a class="arrow-icon">
+                        <span class="left-bar"></span>
+                        <span class="right-bar"></span>
+                    </a>
+                </div>
+                <div class="deck-title">
+                    <div>You don't have any deck yet!</div>
+                </div>
+                <div class="pixelBox pixelBox-green" onclick="location.href='decks.html'">
+                    <div class="pixelBoxContent">ADD</div>
+                </div>
+                <div class="pixelBox pixelBox-yellow" onclick="location.href='decks.html'">
+                    <div class="pixelBoxContent">IMPORT</div>
+                </div>
+            </div>
+
+            <div class="deck">
+                <div class="deck-collapse">
+                    <a class="arrow-icon">
+                        <span class="left-bar"></span>
+                        <span class="right-bar"></span>
+                    </a>
+                </div>
+                <div class="deck-title">
+                    <div>Deck 1</div>
+                </div>
+                <div class="pixelBox pixelBox-green" onclick="location.href='decks.html'">
+                    <div class="pixelBoxContent">EDIT</div>
+                </div>
+                <div class="pixelBox pixelBox-red" onclick="location.href='decks.html'">
+                    <div class="pixelBoxContent">DELETE</div>
+                </div>
+            </div>
+
+            <div class="deck deck-ghost">
+                <div class="deck-grey-container">
+                    <div class="deck-grey-block"></div>
+                </div>
+                <div class="pixelBox pixelBox-ghost">
+                    <div class="pixelBoxContent"></div>
+                </div>
+                <div class="pixelBox pixelBox-ghost">
+                    <div class="pixelBoxContent"></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <!-- <footer></footer> -->
+
+    <script src="js/decks/arrow_collapse.js"></script>
+    <script>
+        const decks = {};
+    </script>
+    <script src="js/decks/deck_loading.js"></script>
+</body>
+
+</html>

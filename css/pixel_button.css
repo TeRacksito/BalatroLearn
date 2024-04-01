@@ -1,0 +1,172 @@
+:root {
+    --color-blue: #0088F1;
+    --color-green: #3A9571;
+    --color-yellow: #EF8E00;
+    --color-red: #EF453A;
+
+    --color-shaded-blue: #005097;
+    --color-shaded-green: #1B573F;
+    --color-shaded-yellow: #955300;
+    --color-shaded-red: #95221C;
+
+    --color-ghost-loading: linear-gradient(110deg, rgba(116,116,116,1) 4%, rgba(146,146,146,1) 11%, rgba(116,116,116,1) 21%, rgba(116,116,116,1) 39%, rgba(146,146,146,1) 47%, rgba(116,116,116,1) 54%, rgba(116,116,116,1) 68%, rgba(146,146,146,1) 78%, rgba(116,116,116,1) 82%, rgba(146,146,146,1) 89%, rgba(116,116,116,1) 93%);
+}
+
+.pixelBox {
+    color: white;
+    height: auto;
+    margin: 10px;
+
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    position: relative;
+    display: block;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+.pixelBoxContent {
+    min-width: 200px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pixelBox:active {
+    top: 0.5rem;
+    box-shadow: none;
+}
+
+.pixelBox:active::before {
+    box-shadow: none;
+}
+
+.pixelBox:active::after {
+    box-shadow: none;
+}
+
+.pixelBox::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: -10px;
+    right: -10px;
+    background: black;
+    z-index: -1;
+    box-shadow: 0 var(--box-border) 0 0 var(--box-border-dark-shadow-color);
+}
+
+.pixelBox::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: -6px;
+    right: -6px;
+    background: black;
+    z-index: -1;
+    box-shadow: 0 var(--box-border) 0 0 var(--box-border-dark-shadow-color);
+}
+
+.pixelBox {
+    padding: var(--global-padding);
+    position: relative;
+    background: black;
+    width: auto;
+    z-index: 2;
+
+    box-shadow: 0 var(--box-border) 0 0 var(--box-border-dark-shadow-color);
+}
+
+.pixelBox-blue,
+.pixelBox-blue::before,
+.pixelBox-blue::after {
+    background: var(--color-blue);
+}
+
+.pixelBox-blue:hover,
+.pixelBox-blue:hover::before,
+.pixelBox-blue:hover::after,
+.pixelBox-blue:active,
+.pixelBox-blue:active::before,
+.pixelBox-blue:active::after {
+    background: var(--color-shaded-blue);
+}
+
+.pixelBox-green,
+.pixelBox-green::before,
+.pixelBox-green::after {
+    background: var(--color-green);
+}
+
+.pixelBox-green:hover,
+.pixelBox-green:hover::before,
+.pixelBox-green:hover::after,
+.pixelBox-green:active,
+.pixelBox-green:active::before,
+.pixelBox-green:active::after {
+    background: var(--color-shaded-green);
+}
+
+.pixelBox-yellow,
+.pixelBox-yellow::before,
+.pixelBox-yellow::after {
+    background: var(--color-yellow);
+}
+
+.pixelBox-yellow:hover,
+.pixelBox-yellow:hover::before,
+.pixelBox-yellow:hover::after,
+.pixelBox-yellow:active,
+.pixelBox-yellow:active::before,
+.pixelBox-yellow:active::after {
+    background: var(--color-shaded-yellow);
+}
+
+.pixelBox-red,
+.pixelBox-red::before,
+.pixelBox-red::after {
+    background: var(--color-red);
+}
+
+.pixelBox-red:hover,
+.pixelBox-red:hover::before,
+.pixelBox-red:hover::after,
+.pixelBox-red:active,
+.pixelBox-red:active::before,
+.pixelBox-red:active::after {
+    background: var(--color-shaded-red);
+}
+
+
+.pixelBox-ghost,
+.pixelBox-ghost::before,
+.pixelBox-ghost::after {
+    background: var(--color-ghost-loading);
+    background-size: 500% 100%;
+    animation: 10s shine linear infinite;
+}
+
+@keyframes shine {
+    to {
+      background-position-x: -500%;
+    }
+  }
+  

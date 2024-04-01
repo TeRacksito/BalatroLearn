@@ -1,0 +1,89 @@
+:root {
+    --global-padding: 1rem;
+}
+
+/* grid areas */
+main>header {
+    grid-area: header;
+}
+
+#main_section {
+    grid-area: question;
+}
+
+#question {
+    grid-area: question;
+}
+
+#answer {
+    grid-area: answer;
+}
+
+.void {
+    grid-area: void;
+}
+
+
+.block {
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body>main {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header void "
+        "question question"
+        "answer answer";
+    width: 100%;
+    gap: var(--global-padding);
+    padding: var(--global-padding);
+    align-content: center;
+}
+
+
+body>header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--global-padding);
+}
+
+body>footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--global-padding);
+}
+
+
+@media only screen and (min-width: 800px) {
+    body>main {
+        grid-template-areas:
+            "header void void"
+            "question question question"
+            "answer answer answer";
+    }
+}
+
+
+@media only screen and (min-width: 1000px) {
+    body>main {
+        padding: var(--global-padding) 6%;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    body>main {
+        padding: var(--global-padding) 12%;
+        grid-template-areas:
+            "header void void void"
+            "question question question question"
+            "answer answer answer answer";
+    }
+}

@@ -1,0 +1,43 @@
+#main_section {
+    display: grid;
+
+    padding: var(--global-padding);
+    gap: var(--global-padding)
+}
+
+.deck {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 100fr 1fr 1fr;
+    gap: var(--global-padding);
+    align-items: center;
+    justify-items: start;
+}
+
+.deck>.deck-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    max-height: calc(2.1 * var(--font-line-height));
+}
+
+.deck>.deck-title>div {
+    /* the wackiest thing ever */
+    padding: 0 0 calc(var(--global-padding) / 5) 0;
+}
+
+.deck>.deck-collapse {
+    width: calc(4 * var(--global-padding));
+    height: calc(4 * var(--global-padding));
+    max-width: calc(4 * var(--global-padding));
+    max-height: calc(4 * var(--global-padding));
+    cursor: pointer;
+    /* background-color: var(--color-blue); */
+}
+
+
+.deck-void {
+    grid-template-columns: 1fr 100fr 1fr 1fr;
+}
+
